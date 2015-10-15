@@ -1,0 +1,12 @@
+<div class="receiptBox">
+    <img src="{{kvitto.bild}}"/>
+
+    <div class="metaInfo">
+        <label>{{kvitto.datum}}</label>
+        <label class="quotation">{{kvitto.anteckning}}</label>
+    </div>
+    <div class="buttonsContainer">
+        <button ng-click="mittAlias.editThis(kvitto)">Redigera</button>
+        <button ng-click="mittAlias.taBort(kvitto)">Färdigställ</button>
+    </div>
+</div>

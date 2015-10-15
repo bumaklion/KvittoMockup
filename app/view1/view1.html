@@ -1,0 +1,9 @@
+<!--denna kanske borde ha en egen controller, men vi ska dela currentkvittotoedit.. det gör man väl med require: ^annakontroller va?-->
+<edit-recipe></edit-recipe>
+
+<h2 ng-show="mittAlias.kvitton.length === 0">Du har hanterat alla kvitton, duktigt!</h2>
+
+<div ng-repeat="kvitto in mittAlias.kvitton">
+    <recipe-box></recipe-box>
+</div>
+

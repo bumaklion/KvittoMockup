@@ -1,0 +1,9 @@
+<div class="editKvitto" ng-show="currentKvittoToEdit">
+    <div class="imgWrapper">
+        <img src="{{currentKvittoToEdit.bild}}"/>
+    </div>
+    <div class="contentWrapper">
+        <label>{{currentKvittoToEdit.anteckning}}</label>
+        <button ng-click="editThis(null)">stäng</button>
+    </div>
+</div>

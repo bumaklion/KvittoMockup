@@ -1,0 +1,206 @@
+/* app css stylesheet */
+
+.menu {
+    list-style: none;
+    border-bottom: 0.1em solid black;
+    margin-bottom: 2em;
+    padding: 0 0 0.5em;
+}
+
+.menu:before {
+    content: "[";
+}
+
+.menu:after {
+    content: "]";
+}
+
+.menu > li {
+    display: inline;
+}
+
+.menu > li:before {
+    content: "|";
+    padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+    content: "";
+    padding: 0;
+}
+
+#mainWrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 300%;
+    background: #C4DED8;
+    box-shadow: 0px 0px 40px -5px #888888;
+}
+
+#headerBorder {
+    height: 150px;
+    width: 100%;
+    background: #8FBCB2;
+}
+
+#headerContent {
+    float: right;
+    padding: 20px;
+}
+
+#headerContent * {
+    display: block;
+    margin-bottom: 20px;
+}
+
+#headerContent button {
+    float: right;
+}
+
+#menu {
+    width: 100%;
+    background: #9affc4;
+    height: 40px;
+}
+
+#menu div {
+    display: inline-block;
+    height: 100%;
+    width: 350px;
+    text-align: center;
+    padding-top: 7px;
+}
+
+html {
+    height: 100%
+}
+
+body {
+    height: 100%
+}
+
+.nav ul {
+    list-style: none;
+    background-color: #444;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.nav li {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2em;
+    line-height: 40px;
+    height: 40px;
+    border-bottom: 1px solid #888;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    transition: .3s background-color;
+}
+
+.nav a:hover {
+    background-color: #005f5f;
+}
+
+.nav a.active {
+    background-color: #fff;
+    color: #444;
+    cursor: default;
+}
+
+@media screen and (min-width: 600px) {
+    .nav li {
+        width: 50%;
+        border-bottom: none;
+        height: 50px;
+        line-height: 50px;
+        font-size: 1.4em;
+    }
+
+    /* Option 1 - Display Inline */
+    .nav li {
+        display: inline-block;
+        margin-right: -4px;
+    }
+}
+
+.receiptBox {
+    height: 250px;
+    width: 30%;
+    box-shadow: 0px 0px 40px -5px #888888;
+    background: #D9FFF6;
+    margin: 20px;
+    display: inline-block;
+    float: left;
+    border-radius: 5px;
+    border: 2px solid #8D9291
+}
+
+.receiptBox img {
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+    margin: 10px;
+}
+
+.receiptBox .metaInfo {
+    float: right;
+    width: 200px;
+}
+
+.receiptBox .metaInfo label {
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.quotation {
+    font-style: italic;
+}
+
+.buttonsContainer {
+    width: 98%;
+    height: 30px;
+}
+
+.buttonsContainer button {
+    float: right;
+    margin-left: 15px;
+}
+
+.editKvitto {
+    width: 1200px;
+    height: 500px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    box-shadow: 0px 5px 45px -5px #000000;
+    background: #D9FFF6;
+    padding: 30px;
+    border-radius: 20px;
+    border: 10px solid #ffffff;
+}
+
+.editKvitto .imgWrapper {
+    height: 100%;
+}
+
+.editKvitto img {
+    height: 100%;
+}
+
+.editKvitto *{
+    display: inline-block;
+    float:left;
+}
+
+.editKvitto .contentWrapper {
+    width: 800px;
+    height: 100%;
+}
+
