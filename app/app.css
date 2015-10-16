@@ -130,7 +130,7 @@ body {
 }
 
 .receiptBox {
-    height: 250px;
+    height: 270px;
     width: 30%;
     box-shadow: 0px 0px 40px -5px #888888;
     background: #D9FFF6;
@@ -173,7 +173,7 @@ body {
 }
 
 .editKvitto {
-    width: 1200px;
+    width: 1300px;
     height: 500px;
     left: 0;
     right: 0;
@@ -188,19 +188,54 @@ body {
 
 .editKvitto .imgWrapper {
     height: 100%;
+    display: inline-block;
 }
 
 .editKvitto img {
     height: 100%;
 }
 
-.editKvitto *{
+/*
+.editKvitto * {
     display: inline-block;
-    float:left;
+    float: left;
 }
+*/
 
 .editKvitto .contentWrapper {
-    width: 800px;
     height: 100%;
+    margin: 10px;
+    display: inline-block;
+    vertical-align: top;
 }
 
+button {
+    background: #ffffff;
+    background-image: -webkit-linear-gradient(top, #ffffff, #ffffff);
+    background-image: -moz-linear-gradient(top, #ffffff, #ffffff);
+    background-image: -ms-linear-gradient(top, #ffffff, #ffffff);
+    background-image: -o-linear-gradient(top, #ffffff, #ffffff);
+    background-image: linear-gradient(to bottom, #ffffff, #ffffff);
+    -webkit-border-radius: 14px;
+    -moz-border-radius: 14px;
+    border-radius: 14px;
+    color: #000000;
+    font-size: 15px;
+    padding: 5px 8px 5px 8px;
+    border: solid #000000 2px;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #3cb0fd;
+    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    text-decoration: none;
+}
+
+button:focus{
+    background: #e08628;
+}

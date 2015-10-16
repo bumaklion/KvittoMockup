@@ -1,9 +1,63 @@
-<div class="editKvitto" ng-show="currentKvittoToEdit">
-    <div class="imgWrapper">
-        <img src="{{currentKvittoToEdit.bild}}"/>
+<style>
+    .buttonWrapper {
+        height: 30px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin-bottom: 10px;
+    }
+
+    .buttonWrapper button {
+        margin-right: 15px;
+    }
+
+    #rowsTable {
+        width: 100%;
+    }
+
+</style>
+
+<form ng-submit="formSubmit()">
+    <div class="editKvitto" ng-show="Kvitto.getKvittoToEdit()">
+        <div class="imgWrapper">
+            <img src="{{Kvitto.getKvittoToEdit().bild}}"/>
+        </div>
+        <div class="contentWrapper">
+            <textarea ng-model="Kvitto.getKvittoToEdit().anteckning"></textarea>
+
+            <button type="button" ng-click="newRow();">ny rad</button>
+
+            <table id="rowsTable">
+                <tr>
+                    <th>Belopp</th>
+                    <th>Kostnadstyp</th>
+                    <th>Konto</th>
+                    <th>Kostandsställe</th>
+                </tr>
+                <tr ng-repeat="rad in Kvitto.getKvittoToEdit().rader">
+                    <td>
+                        <input ng-model="rad.belopp"/>
+                    </td>
+                    <td>
+                        <select ng-model="rad.kostnadstyp">
+                            <option value="kontorsmaterial">kontorsmaterial</option>
+                            <option value="mat">mat</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input ng-model="rad.konto"/>
+                    </td>
+                    <td>
+                        <input ng-model="rad.dim1"/>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="buttonWrapper">
+                <button type="button">spara och färdigställ</button>
+                <button type="button">spara</button>
+                <button type="submit">stäng</button>
+            </div>
+        </div>
     </div>
-    <div class="contentWrapper">
-        <label>{{currentKvittoToEdit.anteckning}}</label>
-        <button ng-click="editThis(null)">stäng</button>
-    </div>
-</div>
+</form>
