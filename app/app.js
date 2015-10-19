@@ -11,7 +11,6 @@ angular.module('myApp', [
 
     .controller('LoadScripts', ['$scope', function ($scope) {
         // Catch the keydown for the entire document
-
         angular.element(document).ready(function () {
             $('body').on('keydown', 'input, select', function (e) {
                 var self = $(this)
@@ -24,6 +23,7 @@ angular.module('myApp', [
                     next = focusable.eq(focusable.index(this) + 1);
                     if (next.length) {
                         next.focus();
+                        next.select();
                     } else {
                         form.submit();
                     }

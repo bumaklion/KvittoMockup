@@ -239,3 +239,19 @@ button:hover {
 button:focus{
     background: #e08628;
 }
+
+.unit{
+    width: 350px;
+    display: table;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.unit label{
+    float: none !important;
+}
+
+.unit *{
+    float:right;
+    width: 200px;
+}

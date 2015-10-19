@@ -15,6 +15,11 @@
         width: 100%;
     }
 
+    #notesArea {
+        width: 300px;
+        height: 200px;
+    }
+
 </style>
 
 <form ng-submit="formSubmit()">
@@ -22,10 +27,26 @@
         <div class="imgWrapper">
             <img src="{{Kvitto.getKvittoToEdit().bild}}"/>
         </div>
-        <div class="contentWrapper">
-            <textarea ng-model="Kvitto.getKvittoToEdit().anteckning"></textarea>
+        <div class="contentWrapper" style="margin: 20px">
 
-            <button type="button" ng-click="newRow();">ny rad</button>
+            <div class="unit" style="float:right; width: 450px;margin-left: 20px;">
+                <label>Anteckning: </label>
+                <textarea id="notesArea" ng-model="Kvitto.getKvittoToEdit().anteckning"></textarea>
+            </div>
+
+            <div class="unit">
+                <label>Bolag: </label>
+                <select ng-model="Kvitto.getKvittoToEdit().organization">
+                    <option value="ApelnsExpress">Apelns Express AB</option>
+                    <option value="BigBag">BigBag AB</option>
+                </select>
+            </div>
+
+            <div class="unit">
+                <label>Belopp: </label>
+                <input ng-model="Kvitto.getKvittoToEdit().totalBelopp" type="text" id="totalAmount"/>
+            </div>
+
 
             <table id="rowsTable">
                 <tr>
@@ -36,7 +57,7 @@
                 </tr>
                 <tr ng-repeat="rad in Kvitto.getKvittoToEdit().rader">
                     <td>
-                        <input ng-model="rad.belopp"/>
+                        <input ng-model="rad.belopp" id="amountField"/>
                     </td>
                     <td>
                         <select ng-model="rad.kostnadstyp">
@@ -53,10 +74,11 @@
                 </tr>
             </table>
 
+            <button type="button" ng-click="newRow();">ny rad</button>
+
             <div class="buttonWrapper">
-                <button type="button">spara och färdigställ</button>
-                <button type="button">spara</button>
-                <button type="submit">stäng</button>
+                <button type="button" id="makeReady">färdigställ</button>
+                <button type="submit">ok</button>
             </div>
         </div>
     </div>
